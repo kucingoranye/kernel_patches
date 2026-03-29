@@ -1,0 +1,65 @@
+beberapa signature dari ksu fork
+    || check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
+	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
+	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
+	|| check_v2_signature(path, 0x35c, "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef")  // ShirkNeko/SukiSU-Ultra
+	|| check_v2_signature(path, 0x375, "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8")  // RapliVx/MamboSU
+	|| check_v2_signature(path, 0x375, "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64")  // ReSukiSU/ReSukiSU
+	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+
+buka /drivers/kernelsu/apk_sign.c kemudian cari
+return check_v2_signature(path, EXPECTED_MANAGER_SIZE, EXPECTED_MANAGER_HASH);
+
+kemudian edit dan tambahkan signature ksu fork lain, contoh penerapan:
+
+backslahxx ksu
+return (check_v2_signature(path, 0x363, "4359c171f32543394cbc23ef908c4bb94cad7c8087002ba164c8230948c21549") // dummy.keystore
+	|| check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH)  // kernelsu official
+	|| check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
+	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
+	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
+	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+	);
+
+ksun legacy
+return (check_v2_signature(path, EXPECTED_MANAGER_SIZE, EXPECTED_MANAGER_HASH)
+    || check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
+    || check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
+    || check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+);
+
+Catatan:
+1. Jika ingin mengganti manager pastikan uninstall dulu sebelum pakai manager lain, jangan install banyak manager sekaligus
+2. Penggunaan signature ini bukan berarti langsung support semua manager, jika tidak support setelah menerapkan signature berarti anda membutuhkan driver dari ksu fork tersebut
+3. 2 masalah tersebut bisa diatasi jika anda pakai ksu dari backslahxx atau kernelsu next versi 3.0.1 ke atas, cukup install modul ksu toolkit dari backslahxx dan anda bisa pakai hampir semua manager ksu fork dan install banyak manager sekaligus.
+ksu toolkit https://github.com/backslashxx/ksu_toolkit
+untuk download, anda bisa ke halaman actions https://github.com/backslashxx/ksu_toolkit/actions
+
+Untuk resukisu, cara menerapkannya berbeda. Secara default jika anda mengaktifkan CONFIG_KSU_MULTI_MANAGER_SUPPORT=y beberapa manager langsung aktif seperti ReSukiSU, SukiSU-Ultra, MKSU, RKSU, KernelSU-Next, KOWSU
+pertama buka /drivers/kernelsu/apk_sign.c
+kemudian cari static apk_sign_key_t apk_sign_keys
+
+Contoh penerapan:
+
+static apk_sign_key_t apk_sign_keys[] = {
+    { EXPECTED_SIZE_RESUKISU, EXPECTED_HASH_RESUKISU }, /* ReSukiSU/ReSukiSU */
+#ifdef CONFIG_KSU_MULTI_MANAGER_SUPPORT
+    { EXPECTED_SIZE_OFFICIAL, EXPECTED_HASH_OFFICIAL }, // tiann/KernelSU
+    { EXPECTED_SIZE_5EC1CFF, EXPECTED_HASH_5EC1CFF }, // 5ec1cff/KernelSU
+    { EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK }, // rsuntk/KernelSU
+    { EXPECTED_SIZE_SUKISU, EXPECTED_HASH_SUKISU }, // SukiSU-Ultra/SukiSU-Ultra
+    { 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7" }, // rifsxd/KernelSU-Next
+    { EXPECTED_SIZE_KOWX712, EXPECTED_HASH_KOWX712 }, // KOWX712/KernelSU
+#ifdef EXPECTED_SIZE
+    { EXPECTED_SIZE, EXPECTED_HASH }, // Custom
+#endif
+#endif
+};
+
+Opsional:
+Jika anda ingin status saat build menampilkan signature yang anda tambahkan atau mengatur urutannya, edit drivers/kernelsu/Kbuild, kemudian cari ifeq ($(CONFIG_KSU_MULTI_MANAGER_SUPPORT), y)
+
+Contoh penerapan:
+ifeq ($(CONFIG_KSU_MULTI_MANAGER_SUPPORT), y)
+$(info -- Supported Unofficial Manager: ReSukiSU, SukiSU-Ultra, MKSU, RKSU, KernelSU-Next, KOWSU )
+endif
