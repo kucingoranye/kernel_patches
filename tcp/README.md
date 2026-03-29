@@ -1,5 +1,4 @@
 ### 🇮🇩 Indonesia
-<br>
 Setelah melakukan patch, pastikan ini aktif pada defconfig <code>CONFIG_TCP_CONG_ADVANCED=y</code> kemudian tambahkan:
 <br>
 
@@ -20,7 +19,6 @@ Setelah melakukan patch, pastikan ini aktif pada defconfig <code>CONFIG_TCP_CONG
 ---
 
 ### 🌐 English
-<br>
 After patching, make sure to enable <code>CONFIG_TCP_CONG_ADVANCED=y</code> in your defconfig, then add these:
 <br>
 
