@@ -1,28 +1,39 @@
-Indonesia
-setelah melakukan patch, pastikan ini aktif pada defconfig CONFIG_TCP_CONG_ADVANCED=y kemudian tambahkan:
-- bbr v3
-CONFIG_TCP_CONG_BBR=y
+### 🇮🇩 Indonesia
+<br>
+Setelah melakukan patch, pastikan ini aktif pada defconfig <code>CONFIG_TCP_CONG_ADVANCED=y</code> kemudian tambahkan:
+<br>
 
-contoh penerapan:
-https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/578d9205499b194fb9204bef2ec9c610e9403f9d
+<ul>
+  <li>
+    <b>BBR V3</b><br>
+    <code>CONFIG_TCP_CONG_BBR=y</code><br>
+    Contoh penerapan: <a href="https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/578d9205499b194fb9204bef2ec9c610e9403f9d" target="_blank">578d920</a>
+  </li>
+  <br>
+  <li>
+    <b>BBR Plus</b><br>
+    <code>CONFIG_TCP_CONG_BBRPLUS=y</code><br>
+    Contoh penerapan: <a href="https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/4fa179075af98a1f0bafde8ccb81bce27115bc1c" target="_blank">4fa1790</a>
+  </li>
+</ul>
 
-- bbr plus
-CONFIG_TCP_CONG_BBRPLUS=y
+---
 
-contoh penerapan:
-https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/4fa179075af98a1f0bafde8ccb81bce27115bc1c
+### 🌐 English
+<br>
+After patching, make sure to enable <code>CONFIG_TCP_CONG_ADVANCED=y</code> in your defconfig, then add these:
+<br>
 
-English
-After patching, make sure to enable CONFIG_TCP_CONG_ADVANCED=y in your defconfig, then add these:
-
-- bbr v3
-CONFIG_TCP_CONG_BBR=y
-
-example:
-https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/578d9205499b194fb9204bef2ec9c610e9403f9d
-
-- bbr plus
-CONFIG_TCP_CONG_BBRPLUS=y
-
-example:
-https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/4fa179075af98a1f0bafde8ccb81bce27115bc1c
+<ul>
+  <li>
+    <b>BBR V3</b><br>
+    <code>CONFIG_TCP_CONG_BBR=y</code><br>
+    Example: <a href="https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/578d9205499b194fb9204bef2ec9c610e9403f9d" target="_blank">578d920</a>
+  </li>
+  <br>
+  <li>
+    <b>BBR Plus</b><br>
+    <code>CONFIG_TCP_CONG_BBRPLUS=y</code><br>
+    Example: <a href="https://github.com/kucingoranye/android_kernel_xiaomi_sdm660_419/commit/4fa179075af98a1f0bafde8ccb81bce27115bc1c" target="_blank">4fa1790</a>
+  </li>
+</ul>
