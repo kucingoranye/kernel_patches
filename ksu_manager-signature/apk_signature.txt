@@ -1,11 +1,18 @@
-beberapa signature dari ksu fork
-    || check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
-	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
-	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
-	|| check_v2_signature(path, 0x35c, "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef")  // ShirkNeko/SukiSU-Ultra
-	|| check_v2_signature(path, 0x375, "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8")  // RapliVx/MamboSU
-	|| check_v2_signature(path, 0x375, "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64")  // ReSukiSU/ReSukiSU
-	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+beberapa signature dari ksu dan ksu fork
+    0x033b, "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6" // tiann/KernelSU
+    384, "7e0c6d7278a3bb8e364e0fcba95afaf3666cf5ff3c245a3b63c8833bd0445cc4" // 5ec1cff/KernelSU
+    0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588"  // KOWX712/KernelSU
+	0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7"  // rifsxd/KernelSU-Next
+	0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b"  // rsuntk/KernelSU
+	0x35c, "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef"  // ShirkNeko/SukiSU-Ultra
+	0x375, "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8"  // RapliVx/MamboSU
+	0x377, "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64"  // ReSukiSU/ReSukiSU
+	0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4"  // WildKernels/Wild_KSU
+	0x338, "f26471a28031130362bce7eebffb9a0b8afc3095f163ce0c75a309f03b644a1f"  // pershoot
+	0x2e8, "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566"  // kaminarich/KamiSU
+	0x317, "4d3c9a3f40b4acab5d89d74eb5f2edf92a6af71a366b9484de507220739d025b"  // vortexsu
+
+
 
 buka /drivers/kernelsu/apk_sign.c kemudian cari
 return check_v2_signature(path, EXPECTED_MANAGER_SIZE, EXPECTED_MANAGER_HASH);
@@ -19,6 +26,8 @@ return (check_v2_signature(path, 0x363, "4359c171f32543394cbc23ef908c4bb94cad7c8
 	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
 	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
 	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+	|| check_v2_signature(path, 0x2e8, "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566")  // kaminarich/KamiSU
+	|| check_v2_signature(path, 384, "7e0c6d7278a3bb8e364e0fcba95afaf3666cf5ff3c245a3b63c8833bd0445cc4") // 5ec1cff/KernelSU
 	);
 
 ksun legacy
@@ -26,17 +35,17 @@ return (check_v2_signature(path, EXPECTED_MANAGER_SIZE, EXPECTED_MANAGER_HASH)
     || check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
     || check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
     || check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+	|| check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
+	|| check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7")  // rifsxd/KernelSU-Next
+	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
+	|| check_v2_signature(path, 0x381, "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4")  // WildKernels/Wild_KSU
+	|| check_v2_signature(path, 0x033b, "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6") // tiann/KernelSU
+	|| check_v2_signature(path, 0x2e8, "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566")  // kaminarich/KamiSU
+	|| check_v2_signature(path, 384, "7e0c6d7278a3bb8e364e0fcba95afaf3666cf5ff3c245a3b63c8833bd0445cc4") // 5ec1cff/KernelSU
 );
 
-Catatan:
-1. Jika ingin mengganti manager pastikan uninstall dulu sebelum pakai manager lain, jangan install banyak manager sekaligus
-2. Penggunaan signature ini bukan berarti langsung support semua manager, jika tidak support setelah menerapkan signature berarti anda membutuhkan driver dari ksu fork tersebut
-3. 2 masalah tersebut bisa diatasi jika anda pakai ksu dari backslahxx atau kernelsu next versi 3.0.1 ke atas, cukup install modul ksu toolkit dari backslahxx dan anda bisa pakai hampir semua manager ksu fork dan install banyak manager sekaligus.
-ksu toolkit https://github.com/backslashxx/ksu_toolkit
-untuk download, anda bisa ke halaman actions https://github.com/backslashxx/ksu_toolkit/actions
-
-Untuk resukisu, cara menerapkannya berbeda. Secara default jika anda mengaktifkan CONFIG_KSU_MULTI_MANAGER_SUPPORT=y beberapa manager langsung aktif seperti ReSukiSU, SukiSU-Ultra, MKSU, RKSU, KernelSU-Next, KOWSU
-pertama buka /drivers/kernelsu/apk_sign.c
+Untuk resukisu, cara menerapkannya berbeda. Secara default jika anda mengaktifkan CONFIG_KSU_MULTI_MANAGER_SUPPORT=y beberapa manager langsung aktif seperti ReSukiSU, SukiSU-Ultra, MKSU, RKSU, KOWSU
+pertama buka drivers/kernelsu/manager/apk_sign.c
 kemudian cari static apk_sign_key_t apk_sign_keys
 
 Contoh penerapan:
@@ -63,3 +72,75 @@ Contoh penerapan:
 ifeq ($(CONFIG_KSU_MULTI_MANAGER_SUPPORT), y)
 $(info -- Supported Unofficial Manager: ReSukiSU, SukiSU-Ultra, MKSU, RKSU, KernelSU-Next, KOWSU )
 endif
+
+metode 2 dengan hash, edit manager_sign.h
+// tiann/KernelSU
+#define EXPECTED_SIZE_OFFICIAL 0x033b
+#define EXPECTED_HASH_OFFICIAL "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6"
+
+// 5ec1cff/KernelSU
+#define EXPECTED_SIZE_5EC1CFF 384
+#define EXPECTED_HASH_5EC1CFF "7e0c6d7278a3bb8e364e0fcba95afaf3666cf5ff3c245a3b63c8833bd0445cc4"
+
+// rsuntk/KernelSU
+#define EXPECTED_SIZE_RSUNTK 0x396
+#define EXPECTED_HASH_RSUNTK "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b"
+
+// SukiSU-Ultra/SukiSU-Ultra
+#define EXPECTED_SIZE_SUKISU 0x35c
+#define EXPECTED_HASH_SUKISU "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef"
+
+// ReSukiSU/ReSukiSU
+#define EXPECTED_SIZE_RESUKISU 0x377
+#define EXPECTED_HASH_RESUKISU "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64"
+
+// KOWX712/KernelSU
+#define EXPECTED_SIZE_KOWX712 0x375
+#define EXPECTED_HASH_KOWX712 "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588"
+
+// rifsxd/KernelSU-Next
+#define EXPECTED_SIZE_KSUN 0x3e6
+#define EXPECTED_HASH_KSUN "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7"
+
+// RapliVx/MamboSU
+#define EXPECTED_SIZE_MAMBO 0x375
+#define EXPECTED_HASH_MAMBO "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8"
+
+// WildKernels/Wild_KSU
+#define EXPECTED_SIZE_WILD 0x381
+#define EXPECTED_HASH_WILD "52d52d8c8bfbe53dc2b6ff1c613184e2c03013e090fe8905d8e3d5dc2658c2e4"
+
+// pershoot
+#define EXPECTED_SIZE_PERSHOOT 0x338
+#define EXPECTED_HASH_PERSHOOT "f26471a28031130362bce7eebffb9a0b8afc3095f163ce0c75a309f03b644a1f"
+
+// kaminarich/KamiSU
+#define EXPECTED_SIZE_KAMI 0x2e8
+#define EXPECTED_HASH_KAMI "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566"
+
+// vortexsu
+#define EXPECTED_SIZE_VORTEX 0x317
+#define EXPECTED_HASH_VORTEX "4d3c9a3f40b4acab5d89d74eb5f2edf92a6af71a366b9484de507220739d025b"
+
+edit apk_sign.c
+
+#ifdef CONFIG_KSU_MULTI_MANAGER_SUPPORT
+    { EXPECTED_SIZE_OFFICIAL, EXPECTED_HASH_OFFICIAL }, // tiann/KernelSU
+    { EXPECTED_SIZE_5EC1CFF, EXPECTED_HASH_5EC1CFF }, // 5ec1cff/KernelSU
+    { EXPECTED_SIZE_RSUNTK, EXPECTED_HASH_RSUNTK }, // rsuntk/KernelSU
+    { EXPECTED_SIZE_SUKISU, EXPECTED_HASH_SUKISU }, // SukiSU-Ultra/SukiSU-Ultra
+    { EXPECTED_SIZE_KOWX712, EXPECTED_HASH_KOWX712 }, // KOWX712/KernelSU
+    { EXPECTED_SIZE_KSUN, EXPECTED_HASH_KSUN }, // rifsxd/KernelSU-Next
+    { EXPECTED_SIZE_MAMBO, EXPECTED_HASH_MAMBO }, // RapliVx/MamboSU
+    { EXPECTED_SIZE_WILD, EXPECTED_HASH_WILD }, // WildKernels/Wild_KSU
+    { EXPECTED_SIZE_PERSHOOT, EXPECTED_HASH_PERSHOOT }, // pershoot
+    { EXPECTED_SIZE_KAMI, EXPECTED_HASH_KAMI }, // kaminarich/KamiSU
+    { EXPECTED_SIZE_VORTEX, EXPECTED_HASH_VORTEX }, // vortexsu
+#ifdef EXPECTED_SIZE
+    { EXPECTED_SIZE, EXPECTED_HASH }, // Custom
+#endif
+#ifdef EXPECTED_PR_BUILD_SIZE
+    { EXPECTED_PR_BUILD_SIZE, EXPECTED_PR_BUILD_HASH }, // Custom 2 (For PR build)
+#endif
+#endif
+};
