@@ -119,7 +119,7 @@ metode 2 dengan hash, edit manager_sign.h
 #define EXPECTED_SIZE_KAMI 0x2e8
 #define EXPECTED_HASH_KAMI "13c415105fad7b798e5584798d82ea334729f0c24de7b9d4cd2f2e1b062eb566"
 
-// kingfinik98/VorteX (VorteXSU)
+// kingfinik98/VorteX
 #define EXPECTED_SIZE_VORTEX 0x317
 #define EXPECTED_HASH_VORTEX "4d3c9a3f40b4acab5d89d74eb5f2edf92a6af71a366b9484de507220739d025b"
 
