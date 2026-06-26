@@ -102,7 +102,7 @@ metode 2 dengan hash, edit manager_sign.h
 #define EXPECTED_HASH_KSUN "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7"
 
 // RapliVx/MamboSU
-#define EXPECTED_SIZE_MAMBO 0x375
+#define EXPECTED_SIZE_MAMBO 0x384
 #define EXPECTED_HASH_MAMBO "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8"
 
 // WildKernels/Wild_KSU
