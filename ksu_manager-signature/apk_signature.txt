@@ -129,8 +129,8 @@ metode 2 dengan hash, edit manager_sign.h
 "67eec44718428adad14e6a9dca57822759aba7e77a8cad7071f6f6704df8bb48"
 
 // Anatdx/YukiSU
-#define EXPECTED_SIZE 0x29c
-#define EXPECTED_HASH
+#define EXPECTED_SIZE_YUKISU 0x29c
+#define EXPECTED_HASH_YUKISU
 "39559b380d4c0191eed81b7eba61533b6a2f247bc55bceba4259e983673f58b7"
 
 edit apk_sign.c
@@ -147,6 +147,8 @@ edit apk_sign.c
     { EXPECTED_SIZE_PERSHOOT, EXPECTED_HASH_PERSHOOT }, // pershoot/KernelSU-Next
     { EXPECTED_SIZE_KAMI, EXPECTED_HASH_KAMI }, // kaminarich/KamiSU
     { EXPECTED_SIZE_VORTEX, EXPECTED_HASH_VORTEX }, // kingfinik98/VorteX
+	{ EXPECTED_SIZE_VORTEXSU, EXPECTED_HASH_VORTEXSU }, // Arkael-Dev/VorteXSU
+	{ EXPECTED_SIZE_YUKISU, EXPECTED_HASH_YUKISU } // Anatdx/YukiSU
 #ifdef EXPECTED_SIZE
     { EXPECTED_SIZE, EXPECTED_HASH }, // Custom
 #endif
