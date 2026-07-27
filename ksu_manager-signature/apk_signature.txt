@@ -16,6 +16,7 @@ beberapa signature dari ksu dan ksu fork
     0x381, "67eec44718428adad14e6a9dca57822759aba7e77a8cad7071f6f6704df8bb48" // Arkael-Dev/VorteXSU
     0x0390, "8a38ea45034a145e29234c4927743b088ef502441f8d24583a1a18f20e4c879a" // terebiko/KittiSU
     0x364, "2d19acc8d27c1285e2ca04ffb60fbcb0d44b05daf2cfdbf5f7101aa17e2dc849" // Yakayna/AgnesSU
+    0x02e8, "1c89980c03432844cfe195dab90bfaecbcd987d19309da648014164be78007d1" // fixz232/ApkeSU
 
 
 
@@ -39,7 +40,6 @@ return (check_v2_signature(path, 0x363, "4359c171f32543394cbc23ef908c4bb94cad7c8
 ksun legacy
 return (check_v2_signature(path, EXPECTED_MANAGER_SIZE, EXPECTED_MANAGER_HASH)
     || check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588")  // KOWX712/KernelSU
-    || check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
     || check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b")  // rsuntk/KernelSU
     || check_v2_signature(path, 0x033b, "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6") // tiann/KernelSU
     || check_v2_signature(path, 0x033b, "c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6") // backslashxx/kernelsu
